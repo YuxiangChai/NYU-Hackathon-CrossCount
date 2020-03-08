@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Entry from '../components/entry';
-import Data from '../components/data.json';
+import Data from './script.js';
 
 function List() {
   return (

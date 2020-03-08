@@ -5,6 +5,7 @@ import List from './pages/index';
 import Cal from './components/caltotal';
 
 function App() {
+  console.log("Hi");
   return (
     <div className="App">
       <header className="title">
