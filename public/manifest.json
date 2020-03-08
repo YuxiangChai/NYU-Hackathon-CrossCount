@@ -12,5 +12,14 @@
     "default_popup": "index.html",
     "default_title": "CrossCount"
   },
-  "content_security_policy": "script-src 'self' 'sha256-6VefC4RbkxEZ/KKivlmLZAcg70eBJNQRQNa23geikCU='; object-src 'self'"
+  "content_security_policy": "script-src 'self' 'sha256-6VefC4RbkxEZ/KKivlmLZAcg70eBJNQRQNa23geikCU='; object-src 'self'",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.zara.com/*"
+      ],
+      "js": ["script.js"],
+      "page": ["content.html"]
+    }
+  ]
 }

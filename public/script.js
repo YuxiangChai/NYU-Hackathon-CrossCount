@@ -5,11 +5,14 @@ function craw(){
         'thehouseofdrew' : "total-recap__final-price"}
     
     var currentURL = document.URL
-    
+    var URL = currentURL.toLocaleLowerCase();
+    console.log("URL : ", URL)
     for(var brandName in brands){
-        if(currentURL.toLocaleLowerCase.indexOf(brandName) !== -1){
+        if(URL.indexOf(brandName) !== -1){
+            console.log(brandName)
             var company = brandName
             var test = document.getElementsByClassName(brands[brandName])
+            console.log(test)
             var result = ""
             for (var i=0, len=test.length|0; i<len; i=i+1|0) {
                 result += "\n  " + test[i].textContent;
@@ -24,20 +27,19 @@ function craw(){
             }
         }
     }
+
+    console.log("result : ", result)
+    console.log("company : ", company)
     return result, company
 }
 
 function returnObj(priceAmount, companyName) {
-    var data = {}
-    data.purchase = []
-    var date = Date.now();
     var obj = {
         price: priceAmount,
-        date: date.toDateString(),
+        date: 'Mar 8 2020',
         Company: companyName
        }
-       data.purchase.push(obj)
-       return data;
+    return obj
 }
 
 let Data = []
@@ -49,4 +51,4 @@ function resultData(){
 
 resultData()
 
-export default Data;
+// export default Data;
